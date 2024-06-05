@@ -8,15 +8,14 @@
     <script>
         $(function(){
             const bglist = ["pink","blue","gray","green"];
-            let count = 100 % bglist.length; // 0,1,2,3
-            // bglist.length는 숫자 4를 의미, 4로 나누었을때의 나머지를 구하는 연산자 %
+            let count = 3;
             $("body").css("background",bglist[count]);
             setInterval(function(){
                 count++;
                 count = count % bglist.length;
                 $("body").css("background", bglist[count]);
-            }, 3000); //3초뒤부터 3초마다 실행하겠다.
-            $("body").css("background", bglist[count]); //화면이 열리자마자 1회 실행
+            }, 3000); 
+            $("body").css("background", bglist[0]); 
         })
     </script>
 </head>
